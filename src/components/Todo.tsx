@@ -36,7 +36,14 @@ const Todo: React.FC<Props> = ({ todo}) => {
             {edit ? "Cancle" : "Edit"}
           </button>
           <button
-            onClick={(event) => deleteThisTodo(event, todo.id)}
+           onClick={(event) => {
+            const confirmBox = window.confirm(
+              "Do you really want to delete this todo?"
+            )
+            if (confirmBox === true) {
+              deleteThisTodo(event, todo.id)
+            }
+          }}
             className="Card--button delete---button"
           >
             Delete
