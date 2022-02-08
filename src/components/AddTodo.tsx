@@ -24,7 +24,7 @@ const AddTodo: React.FC = () => {
     <form className="Form" onSubmit={(e) => handleSaveTodo(e, formData)}>
 
 
-        <input onChange={handleForm} type="text" placeholder="Title" value={taskTitle} id="title" />
+        <input onChange={handleForm} type="text" placeholder="Type your todo title here" value={taskTitle} id="title" />
       
       
         <button disabled={formData === undefined ? true : false}>Add Todo</button>

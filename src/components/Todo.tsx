@@ -32,13 +32,13 @@ const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
         <span style={{ margin: "0 1rem" }}>Complete</span>
         <button
           onClick={() => editThisTodo()}
-          className="Card--button"
+          className="Card--button edit---button"
         >
           {edit ? "Cancle Edit" : "Edit"}
         </button>
         <button
           onClick={(event) => deleteThisTodo(event, todo.id)}
-          className="Card--button"
+          className="Card--button delete---button"
         >
           Delete
         </button>
