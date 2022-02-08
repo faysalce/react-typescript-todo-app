@@ -1,45 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #444;
+  color: rgb(7, 30, 75);
   background: #f5f6f7;
+  font-size: 1rem;
 }
-
-.App {
+h1,h2,h3,h4,h5,h6{
+  color: rgb(7, 30, 75);
+}
+.Todo-section {
+  padding: 2rem 0;
+}
+.container {
+  width: 100%;
   max-width: 728px;
-  margin: 4rem auto;
+  margin: auto auto;
 }
 
-.App > h1 {
+.header-title {
   text-align: center;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  
 }
-.Card-list{
+.Card-list {
   background: #fff;
   box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
-
 .Card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 1.25rem;
+  position: relative;
+}
+.Card-info{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  padding: 1.25rem;
 }
-
-.Card + .Card{
+.Card-info, .Card-edit-from-wrap{
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+.Card + .Card {
   border-top: 1px solid #e1e1e1;
 }
 
@@ -55,21 +71,20 @@ body {
   color: #fff;
   margin-right: 1rem;
 }
-.Card--button:hover{
+.Card--button:hover {
   background-color: ;
 }
-.Card--button:last-child{
+.Card--button:last-child {
   margin-right: 0;
 }
 .Form {
   display: flex;
   padding: 1.25rem;
   background: #fff;
-  margin-bottom: 1rem;
-  border-radius: .5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
-
 }
 
 .Form > div {
@@ -78,11 +93,12 @@ body {
   align-items: center;
 }
 
-.Form input {
+.Form input,
+.Edit-form input {
   background: #f5f6f7;
   padding: 1rem 1.25rem;
-  border: 1px solid rgb(7, 30, 75);
-  border-radius: 2px;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
   display: block;
   outline: none;
   font-size: 1.5rem;
@@ -91,11 +107,12 @@ body {
   font-family: inherit;
 }
 
-.Form button {
+.Form button,
+.Edit-form button {
   background-color: rgb(239, 106, 108);
   color: #fff;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
   border: none;
   font-size: 1.5rem;
@@ -116,4 +133,13 @@ body {
 }
 .hide-button {
   display: none;
+}
+
+.Edit-form {
+  display: inline-flex;
+  padding-top: .5rem;
+}
+.Edit-form input, .Edit-form button  {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }

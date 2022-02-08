@@ -25,7 +25,7 @@ const EditTodo: React.FC<PropsEdit> = ({editThisTodo,todo}) => {
   };
 
   return (
-    <form className="Form" onSubmit={(e) => handleSaveTodo(e, formData)}>
+    <form className="Edit-form" onSubmit={(e) => handleSaveTodo(e, formData)}>
 
 
         <input onChange={handleForm} type="text" placeholder="Title" value={taskTitle} id="title" />

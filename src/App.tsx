@@ -9,9 +9,14 @@ export default function App() {
   return (
     <TodoProvider>
       <main className="App">
-        <h1>My Todos</h1>
-        <AddTodo />
-        <Todos />
+        <section className="Todo-section">
+          <div className="container">
+            <h1 className="header-title">My Todos</h1>
+            <AddTodo />
+            <Todos />
+          </div>
+        </section>
+
       </main>
     </TodoProvider>
   );
