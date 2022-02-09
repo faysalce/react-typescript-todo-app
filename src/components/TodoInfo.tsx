@@ -3,8 +3,6 @@ type PropsInfo = {
     todo: ITodo;
 };
 const TodoInfo: React.FC<PropsInfo> = ({ todo }) => {
-
-
     const checkTodo: string = todo.status ? `line-through` : "";
 
     return (

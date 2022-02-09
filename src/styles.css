@@ -45,15 +45,31 @@ h1,h2,h3,h4,h5,h6{
   padding: 1.25rem;
   position: relative;
 }
+
 .Card-info{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 .Card-info, .Card-edit-from-wrap{
   width: 100%;
   max-width: 100%;
   flex: 0 0 100%;
+  
+}
+.Card--text{
+  flex: 1 1 auto;
+  width: 1%;
+  word-break: break-all;
+  border-right: 1px solid lightgray;
+  margin-right: 1rem;
+  padding-right: 1rem;
+
+}
+.action-wrp{
+  white-space: nowrap;
+  word-break: break-word;
 }
 .Card + .Card {
   border-top: 1px solid #e1e1e1;

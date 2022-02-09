@@ -16,13 +16,14 @@ const Todo: React.FC<Props> = ({ todo }) => {
   const editThisTodo = () => {
     setEdit(!edit);
   }
+
   return (
     <div className="Card">
       <div className="Card-info">
-        <div>
+       
           <TodoInfo todo={todo} />
-        </div>
-        <div>
+
+        <div className="action-wrp">
           <input
             type="checkbox"
             checked={todo.status}
